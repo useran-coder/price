@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light">
-<title>동방파스텍 단가표 만들기</title>
+<title>단가표 만들기</title>
 <style>
 html,body{margin:0;height:100%;background:#f8fafc;font-family:'Pretendard','Malgun Gothic','Apple SD Gothic Neo',sans-serif;color:#0f172a}
 #ld{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center}
@@ -37,7 +37,7 @@ html,body{margin:0;height:100%;background:#f8fafc;font-family:'Pretendard','Malg
     if(!/APP_BUILD=/.test(t)) throw new Error('매출 분석 도구 파일이 아님');
     var flag='<script>window.__PRICE_ONLY_V1468=1;window.__SALES_PATH_V1468='+JSON.stringify(SRC)+';<\/script>';
     t=t.replace(/<head([^>]*)>/i,function(m){ return m+flag; });
-    t=t.replace(/<title>[^<]*<\/title>/i,'<title>동방파스텍 단가표 만들기</title>');
+    t=t.replace(/<title>[^<]*<\/title>/i,'<title>단가표 만들기</title>');
     document.open(); document.write(t); document.close();
   }).catch(function(e){ fail('불러오지 못했습니다 ('+(e&&e.message||e)+').'); });
 })();
